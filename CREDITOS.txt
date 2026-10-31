@@ -1,0 +1,16 @@
+﻿Créditos de recursos de terceros - La última serie
+==================================================
+Criatura (El Repetidor): "Creeping Shadow Creature – Free Horror 3D Model" de Purple.Point
+  https://sketchfab.com/3d-models/53e77576ca0b4c5988ba2991a4bff075  - Licencia CC Attribution 4.0
+  Cambios: reducida a ~30.000 caras, reorientada y animada por código.
+Texturas PBR: Poly Haven (CC0) - rubber_tiles, terrazzo_tiles, painted_plaster_wall, checkered_pavement_tiles,
+  metal_plate, fabric_leather_02, granite_tile, concrete_floor_02, asphalt_02.
+Máquinas (Sketchfab, CC Attribution 4.0; reducidas, recoloreadas y recolocadas):
+  Treadmill Machine - sousinho | Leg Press Machine - silentsheri | Gym Machine_ Body Solid - Huunguyen98
+  Weight Bench - jaromir.ternavskiy | Weight Room Set 2 - tylerhalterman
+Sonido de lluvia: "20260531 Raining in Bangkok 01" de kijjaz - https://freesound.org/people/kijjaz/sounds/856405/ - CC0
+Primera aparición: "07573 thriller scary brass depression" de Robinhood76 - https://freesound.org/people/Robinhood76/sounds/476531/ - CC BY-NC 4.0 (uso no comercial)
+Al recoger la bolsa: "Scary Cinematic sound_and drums" de liezen3 - https://freesound.org/people/liezen3/sounds/479919/ - CC BY 4.0
+Grito (acercamiento entre relámpagos y captura): "Ophelia Horror Shriek One" de ØpheliaDarkly - https://freesound.org/people/%C3%98pheliaDarkly/sounds/868361/ - CC BY 4.0
+Respiración del jugador: "Pushups Breathing Exercice" de Moulaythami - https://freesound.org/people/Moulaythami/sounds/536931/ - CC BY-SA 4.0
+Cuerpo del jugador (reflejo): "Casual Man Character" de strielecki - https://sketchfab.com/3d-models/05d9dd5bdddd4157bd46dc179781ee6e - CC BY 4.0
