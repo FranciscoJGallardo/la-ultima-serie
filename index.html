@@ -6,9 +6,13 @@
     <title>La última serie</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-      <style>html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }</style>
+      <style>html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
+      #rotate-hint { display: none; position: fixed; inset: 0; z-index: 10; background: #000; color: #ddd;
+        font: 600 6vmin sans-serif; align-items: center; justify-content: center; text-align: center; padding: 8vmin; }
+      @media (orientation: portrait) { body.mobile #rotate-hint { display: flex; } }</style>
   </head>
   <body>
+    <div id="rotate-hint">Gira el móvil: La última serie se juega en horizontal</div>
     <div id="unity-container" class="unity-desktop">
       <div id="unity-fullscreen-container">
         <canvas id="unity-canvas" width="1280" height="720" tabindex="-1"></canvas>
@@ -106,12 +110,19 @@
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
+        document.body.classList.add('mobile');
+        document.addEventListener('touchend', function () {
+          var el = document.documentElement;
+          Promise.resolve(el.requestFullscreen ? el.requestFullscreen({ navigationUI: 'hide' }) : null)
+            .then(function () { return screen.orientation && screen.orientation.lock ? screen.orientation.lock('landscape') : null; })
+            .catch(function () {});
+        }, { once: true });
         document.querySelector("#unity-container").className = "unity-mobile";
         canvas.className = "unity-mobile";
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
-        config.devicePixelRatio = 1;
+        config.devicePixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
 
 
       } else {
@@ -136,6 +147,7 @@
             loadingContainer.style.display = "none";
           }
         }).then((unityInstance) => {
+                window.unityInstance = unityInstance;
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
